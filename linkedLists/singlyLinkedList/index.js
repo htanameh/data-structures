@@ -37,4 +37,16 @@ class SinglyLinkedList{
 		this.length++;
 		return this.printList();
 	}
+
+	printList() {
+		let listItems = [];
+		if (this.length) {
+			let start = this.head;
+			while (start !== null) {
+				listItems.push(start.value);
+				start = start.next;
+			}
+		}
+		return listItems;
+	}
 }
