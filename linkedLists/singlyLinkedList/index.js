@@ -5,8 +5,8 @@ class Node {
 	}
 }
 
-class SinglyLinkedList{
-    constructor() {
+class SinglyLinkedList {
+	constructor() {
 		this.head = null;
 		this.tail = null;
 		this.length = 0;
@@ -48,5 +48,21 @@ class SinglyLinkedList{
 			}
 		}
 		return listItems;
+	}
+
+	traverse(index) {
+		if (this.length === 0) {
+			return null;
+		}
+		if (index > this.length || index < 0) {
+			return null;
+		}
+		let indexNode = this.head;
+		let count = 0;
+		while (index !== count) {
+			indexNode = indexNode.next;
+			count++;
+		}
+		return indexNode;
 	}
 }
